@@ -1,4 +1,4 @@
-# Big data platform for the coffee-shop retails
+# Big data platform for the coffee-shop retailers
 <img src="https://user-images.githubusercontent.com/83225697/121920357-28354180-cd62-11eb-9aef-2ae4b4986ad2.png" />
 
 # What is this?
