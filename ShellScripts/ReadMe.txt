@@ -1,0 +1,2 @@
+Run:
+bash sqoopDemo.sh
