@@ -15,14 +15,10 @@ Company A has a sales system consisting of N=60 retail stores (shops). Sales dat
 - Sqoop is used to export your computed results in hdfs into RDBMS (we use MySQL).
 - You can use BI tools that connected to RDBMS data resource for visulization or decision making.
 # Requirements
-## OS & PC(VMware or Virtualbox).
-- Ubuntu 20.04 LTS
-- 1 master 16GB Ram, 40GB disk (user: hduser, pc: master).
-- 2 slave 2GB Ram, 30GB disk.(user: hduser, pc: slave01/slave02.)
-## Hadoop cluster:
-- Prepare your hadoop cluster.
-- Mapping ip of every pc to the name of this pc, ex: **ip of master** is mapped to name **master**.
-- Start and check if your cluster is on the right configuration.
+A hadoop cluter with configuration as below:
+- Master (namenode): IP: 192.168.18.133 (master), CPU: 4 cores, RAM: 16 GB, Storage: 40 GB, OS: Ubuntu 20.04 (hduser@master).
+- Slave01 (datanode): IP: 192.168.18.129 (slave01), CPU: 2 cores, RAM: 2 GB, Storage: 40 GB, OS: Ubuntu 20.04 (hduser@slave01).
+- Slave02 (datanode): IP: 192.168.18.130 (slave02), CPU : 2 cores, RAM: 2 GB, Storage: 40 GB, OS: Ubuntu 20.04 (hduser@slave02).
 ## Hadoop ecosystem
 - Hadoop ^3.3.0
 - Apache Sqoop ^2.6.0
@@ -54,10 +50,11 @@ Company A has a sales system consisting of N=60 retail stores (shops). Sales dat
 ## Nifi
 ### Import xml file
 - Import the flow in your Nifi.
-- Config link dir and host.
+- Config link dir and host in every processor that needed.
 ### Put the script file at the path you config in ExecuteScript Processor.
 - You can change the script to transform data as your custom.
 - The script can be replace by Python, Groovy,...
+** Read file readme to know more about processors will be used.**
 ## MySQL
 - Create DB **aiacad** and grant all privilege to user **hduser** (password: **hduser@123**, host: **%**).
 - You can consult this one at your **root** user mysql:
