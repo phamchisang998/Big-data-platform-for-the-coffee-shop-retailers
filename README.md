@@ -2,6 +2,10 @@
 <img src="https://user-images.githubusercontent.com/83225697/121920357-28354180-cd62-11eb-9aef-2ae4b4986ad2.png" />
 
 # What is this?
+## Problem
+Company A has a sales system consisting of N=60 retail stores (shops). Sales data of shops are sent to the central server system for analysis periodically after every T interval (eg T = 1 hour). The data each time each shop sends back is saved in a *.csv file (Shop-k-YYYYMMDD-hh.csv, k <=N). The structure of content in each file is as follows:
+*OrderID,ProductID,ProductName,Amount,Price,Discount*
+## Solution
 - This is a bundle of application and code that built upon hadoop ecosystem.
 - This system is aimed to store, manage, manipulate and analyze big data of the coffee-shop retailers.
 # Overview
