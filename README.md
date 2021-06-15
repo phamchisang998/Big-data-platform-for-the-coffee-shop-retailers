@@ -5,15 +5,14 @@
 ## Problem
 Company A has a sales system consisting of N=60 retail stores (shops). Sales data of shops are sent to the central server system for analysis periodically after every T interval (eg T = 1 hour). The data each time each shop sends back is saved in a *.csv file (Shop-k-YYYYMMDD-hh.csv, k <=N). The structure of content in each file is as follows:\
 *OrderID,ProductID,ProductName,Amount,Price,Discount*
-## Solution
-- This is a bundle of application and code that built upon hadoop ecosystem.
-- This system is aimed to store, manage, manipulate and analyze big data of the coffee-shop retailers.
-# Overview
 - Assume that data will come to realtime-data folder in your pc (you can use DataMoving to move data any other place in you PC as you want).
 - Use Nifi to transform and move data into hdfs.
 - In HDFS you can use Hive for analytics or map reduce application according to your uses.
 - Sqoop is used to export your computed results in hdfs into RDBMS (we use MySQL).
 - You can use BI tools that connected to RDBMS data resource for visulization or decision making.
+## Solution
+- This is a bundle of application and code that built upon hadoop ecosystem.
+- This system is aimed to store, manage, manipulate and analyze big data of the coffee-shop retailers.
 # Requirements
 A hadoop cluter with configuration as below:
 - Master (namenode): IP: 192.168.18.133 (master), CPU: 4 cores, RAM: 16 GB, Storage: 40 GB, OS: Ubuntu 20.04 (hduser@master).
